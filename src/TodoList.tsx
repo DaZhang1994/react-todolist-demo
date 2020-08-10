@@ -2,7 +2,7 @@ import React, { Fragment, useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTodoItem, changeInputValue, deleteTodoItem, getInitList } from "./store/actions";
 import TodoItem from "./TodoItem";
-import './todoList.css'
+import { SubmitButton } from "./TodoList.style";
 
 interface TodoListStates {
   inputValue: string;
@@ -43,7 +43,7 @@ const TodoList = () => {
           value={inputValue}
           onChange={handleInputChange}
         />
-        <button onClick={handleButtonClick}>Submit</button>
+        <SubmitButton onClick={handleButtonClick}>Submit</SubmitButton>
       </div>
       <ul>
       {
